@@ -1,0 +1,155 @@
+/* General Table Styles */
+table {
+  width: 100%;
+  max-width: 800px; 
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ddd; 
+  padding: 15px;
+  text-align: center;
+}
+
+thead th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px;
+}
+
+td {
+  height: 100px;
+  transition: background-color 0.3s, transform 0.3s; /* hover effect*/
+}
+
+/* Booked dates  */
+td.booked {
+  background-color: #d17977; /* Highlight booked dates in a different color */
+}
+
+/* Hover effect for cells */
+td:hover {
+  background-color: #e0f7fa;
+  cursor: pointer;
+  transform: scale(1.05); /* hover effect */
+}
+
+/* Weekend column styles */
+td:nth-child(1), td:nth-child(7) {
+  background-color: #e4e4e4; /* Light gray for distinction of weekday vs weekend */
+}
+
+/* Navigation buttons */
+.navigation {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.navigation button {
+  background-color: #007bff; /* navigation buttons */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* hover effect */
+}
+
+.navigation button:hover {
+  background-color: #0056b3; /* Darker blue for hover */
+}
+
+/* Current Month */
+#currentMonth {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* modal/popout Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; /* Center */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Input Fields for Event Modal */
+#eventReason, #eventText {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Buttons in Modal */
+#saveEvent, #deleteEvent {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+#saveEvent:hover {
+  background-color: #218838;
+}
+
+#deleteEvent {
+  background-color: #dc3545;
+}
+
+#deleteEvent:hover {
+  background-color: #c82333;
+}
+
+/* General Page Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h2 {
+  margin-top: 0;
+  color: #007bff;
+  text-align: center;
+}
