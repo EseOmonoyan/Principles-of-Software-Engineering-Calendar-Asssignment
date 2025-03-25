@@ -22,24 +22,25 @@ thead th {
 
 td {
   height: 100px;
-  transition: background-color 0.3s, transform 0.3s; /* hover effect*/
+  vertical-align: top;
+  transition: background-color 0.3s, transform 0.3s; /* hover effect */
 }
 
-/* Booked dates  */
+/* Booked dates */
 td.booked {
-  background-color: #d17977; /* Highlight booked dates in a different color */
+  background-color: #d17977; /* highlight booked dates */
 }
 
 /* Hover effect for cells */
 td:hover {
   background-color: #e0f7fa;
   cursor: pointer;
-  transform: scale(1.05); /* hover effect */
+  transform: scale(1.05);
 }
 
 /* Weekend column styles */
 td:nth-child(1), td:nth-child(7) {
-  background-color: #e4e4e4; /* Light gray for distinction of weekday vs weekend */
+  background-color: #e4e4e4; /* Light gray for weekends */
 }
 
 /* Navigation buttons */
@@ -61,7 +62,7 @@ td:nth-child(1), td:nth-child(7) {
 }
 
 .navigation button:hover {
-  background-color: #0056b3; /* Darker blue for hover */
+  background-color: #0056b3; /* darker blue on hover */
 }
 
 /* Current Month */
@@ -71,7 +72,7 @@ td:nth-child(1), td:nth-child(7) {
   color: #333;
 }
 
-/* modal/popout Styles */
+/* Modal Styles */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; 
@@ -109,7 +110,10 @@ td:nth-child(1), td:nth-child(7) {
 }
 
 /* Input Fields for Event Modal */
-#eventReason, #eventText {
+#eventTitle,
+#eventDetails,
+#eventLocation,
+#eventTime {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -118,7 +122,8 @@ td:nth-child(1), td:nth-child(7) {
 }
 
 /* Buttons in Modal */
-#saveEvent, #deleteEvent {
+#saveEvent,
+#deleteEvent {
   background-color: #28a745;
   color: #fff;
   border: none;
@@ -152,4 +157,14 @@ h2 {
   margin-top: 0;
   color: #007bff;
   text-align: center;
+}
+
+/* Event text styling inside the calendar cell */
+td .event {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

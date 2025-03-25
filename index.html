@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Calendar Application</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Calendar Application</title>
 </head>
-
 <body>
-    <!-- previous or next month navigators -->
-    <div class="navigation">
-        <button id="prevMonth">Previous Month</button>
-        <span id="currentMonth">Current Month</span>
-        <button id="nextMonth">Next Month</button>
+  <!-- Previous or next month navigators -->
+  <div class="navigation">
+    <button id="prevMonth">Previous Month</button>
+    <span id="currentMonth">Current Month</span>
+    <button id="nextMonth">Next Month</button>
+  </div>
+
+  <!-- Calendar generation -->
+  <table id="calendar">
+    <thead>
+      <tr>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dates will be generated dynamically using JavaScript -->
+    </tbody>
+  </table>
+
+  <!-- Event Modal -->
+  <div id="eventModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Add Event</h2>
+
+      <!-- Event title -->
+      <label for="eventTitle">Title:</label>
+      <input type="text" id="eventTitle" placeholder="Enter event title" />
+
+      <!-- Event details -->
+      <label for="eventDetails">Details:</label>
+      <input type="text" id="eventDetails" placeholder="Enter event details" />
+
+      <!-- Event location -->
+      <label for="eventLocation">Location:</label>
+      <input type="text" id="eventLocation" placeholder="Enter event location" />
+
+      <!-- Event time -->
+      <label for="eventTime">Time:</label>
+      <input type="time" id="eventTime" />
+
+      <!-- Buttons -->
+      <button id="saveEvent">Save Event</button>
+      <button id="deleteEvent" style="display: none;">Delete Event</button>
     </div>
+  </div>
 
-    <!-- Calendar generation -->
-    <table id="calendar">
-        <thead>
-            <tr>
-                <!-- Days -->
-                <th>Sunday</th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Dates in here using JavaScript -->
-        </tbody>
-    </table>
-
-    <!-- event handler -->
-    <div id="eventModal" class="modal">
-        <div class="modal-content">
-            <span id="closeModal" class="close">&times;</span>
-            <h2>Add Event</h2>
-            
-            <!-- Event reason -->
-            <label for="eventReason">Reason:</label>
-            <input type="text" id="eventReason" placeholder="Enter reason for event">
-            
-            <!-- Event details -->
-            <label for="eventText">Event:</label>
-            <input type="text" id="eventText" placeholder="Enter event details">
-            
-            <!-- saving event -->
-            <button id="saveEvent">Save Event</button>
-            <!-- removing event -->
-            <button id="deleteEvent" style="display: none;">Delete Event</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
