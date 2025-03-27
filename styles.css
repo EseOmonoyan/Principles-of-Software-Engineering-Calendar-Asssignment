@@ -5,6 +5,8 @@ table {
   margin: 20px auto;
   border-collapse: collapse;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  table-layout: fixed;
+
 }
 
 th, td {
@@ -20,11 +22,6 @@ thead th {
   padding: 15px;
 }
 
-td {
-  height: 100px;
-  vertical-align: top;
-  transition: background-color 0.3s, transform 0.3s; /* hover effect */
-}
 
 /* Booked dates */
 td.booked {
@@ -159,12 +156,96 @@ h2 {
   text-align: center;
 }
 
-/* Event text styling inside the calendar cell */
+
+
+.confirm-btn {
+  padding: 10px 20px;
+  margin: 10px 10px 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.confirm-btn.yes {
+  background-color: #dc3545;
+  color: white;
+}
+
+.confirm-btn.no {
+  background-color: #6c757d;
+  color: white;
+}
+
+.confirm-btn.yes:hover {
+  background-color: #c82333;
+}
+
+.confirm-btn.no:hover {
+  background-color: #5a6268;
+}
+
+/* Highlight today's date */
+td.today {
+  background-color: #cce5ff !important; /* Light blue that matches your screenshot */
+  border: 2px solid #3399ff;
+}
+
+
+td {
+  height: 100px;
+  max-height: 100px;
+  width: 100px;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 4px; /* reduced padding */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Make sure long titles don't stretch the cell */
 td .event {
+  font-weight: bold;
   font-size: 12px;
-  margin-top: 5px;
   color: #333;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+}
+
+
+/* Today’s highlight */
+td.today {
+  background-color: #cce5ff !important;
+  border: 2px solid #3399ff;
+}
+
+/* Confirm Modal Buttons */
+.confirm-btn {
+  padding: 10px 20px;
+  margin: 10px 10px 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.confirm-btn.yes {
+  background-color: #dc3545;
+  color: white;
+}
+
+.confirm-btn.no {
+  background-color: #6c757d;
+  color: white;
+}
+
+.confirm-btn.yes:hover {
+  background-color: #c82333;
+}
+
+.confirm-btn.no:hover {
+  background-color: #5a6268;
 }

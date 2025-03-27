@@ -7,14 +7,14 @@
   <title>Calendar Application</title>
 </head>
 <body>
-  <!-- Previous or next month navigators -->
+  <!-- Navigation -->
   <div class="navigation">
     <button id="prevMonth">Previous Month</button>
     <span id="currentMonth">Current Month</span>
     <button id="nextMonth">Next Month</button>
   </div>
 
-  <!-- Calendar generation -->
+  <!-- Calendar Table -->
   <table id="calendar">
     <thead>
       <tr>
@@ -27,9 +27,7 @@
         <th>Saturday</th>
       </tr>
     </thead>
-    <tbody>
-      <!-- Dates will be generated dynamically using JavaScript -->
-    </tbody>
+    <tbody></tbody>
   </table>
 
   <!-- Event Modal -->
@@ -38,25 +36,29 @@
       <span id="closeModal" class="close">&times;</span>
       <h2>Add Event</h2>
 
-      <!-- Event title -->
       <label for="eventTitle">Title:</label>
       <input type="text" id="eventTitle" placeholder="Enter event title" />
 
-      <!-- Event details -->
       <label for="eventDetails">Details:</label>
       <input type="text" id="eventDetails" placeholder="Enter event details" />
 
-      <!-- Event location -->
       <label for="eventLocation">Location:</label>
       <input type="text" id="eventLocation" placeholder="Enter event location" />
 
-      <!-- Event time -->
       <label for="eventTime">Time:</label>
       <input type="time" id="eventTime" />
 
-      <!-- Buttons -->
       <button id="saveEvent">Save Event</button>
       <button id="deleteEvent" style="display: none;">Delete Event</button>
+    </div>
+  </div>
+
+  <!-- Confirm Delete Modal -->
+  <div id="confirmDeleteModal" class="modal">
+    <div class="modal-content">
+      <h3>Are you sure you want to delete this event?</h3>
+      <button id="confirmDeleteYes" class="confirm-btn yes">Yes</button>
+      <button id="confirmDeleteNo" class="confirm-btn no">No</button>
     </div>
   </div>
 
